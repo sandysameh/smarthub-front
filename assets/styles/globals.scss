@@ -1,0 +1,95 @@
+@use "./vars/colors" as *;
+@use "./vars/common";
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: $background;
+  font-family: common.$main_font;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+// .landscape {
+//   content: "";
+//   background-image: url(https://smarthub-imgs.s3.me-south-1.amazonaws.com/wedding.jpeg);
+//   background-repeat: no-repeat;
+//   background-position: 50%;
+//   background-size: 100% 100%;
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100vw;
+//   height: 100vh;
+//   z-index: 9;
+//   // display: none;
+//   // overflow: hidden;
+// }
+// // @media (max-height: 500px) and (max-width: 991px) and (orientation: landscape) and (min-width: 500px) {
+// @media screen and (min-width: 320px) and (max-width: 812px) and (orientation: landscape) {
+//   body {
+//     overflow: hidden;
+//   }
+//   .landscape {
+//     display: block;
+//   }
+// }
+
+.main_title {
+  color: $text_dark_gary;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 50px;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  span {
+    display: inline-block;
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+  @media (max-width: common.$regular_phone) {
+    font-size: 26px;
+  }
+}
+
+.sub_title {
+  font-size: 25px;
+  color: $text_light_gary;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 600;
+
+  @media (max-width: common.$regular_phone) {
+    font-size: 20px;
+  }
+}
+
+.close_modal_icon {
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  border-radius: 50%;
+  box-shadow: common.$box_shadow;
+  background-color: white;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg {
+    width: 15px;
+    path {
+      fill: $text_dark_gary;
+    }
+  }
+}

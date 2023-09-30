@@ -1,0 +1,34 @@
+/* Hamburger Icon Styles */
+@use "../../../assets/styles/vars/colors" as *;
+@use "../../../assets/styles/vars/common" as *;
+
+.hamburger {
+  width: 25px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  cursor: pointer;
+  margin-left: 16px;
+  margin-top: 2.2vh;
+
+  &.inactive {
+    display: none;
+    pointer-events: none;
+  }
+  //   order: 1;  /* Make it the most left item */
+
+  @media (max-width: $regular_phone) {
+    margin-top: 1.7vh;
+  }
+  &__line {
+    width: 100%;
+    height: 1px;
+    background-color: $black; /* Adjust the color as needed */
+
+    &.middle {
+      width: 80%; /* Adjust the width of the middle line as desired */
+    }
+  }
+}

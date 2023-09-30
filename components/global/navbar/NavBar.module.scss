@@ -1,0 +1,62 @@
+@use "../../../assets/styles/vars/colors" as *;
+@use "../../../assets/styles/vars/common" as *;
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  background-color: $primary_background_light;
+  align-content: center;
+  justify-content: space-between;
+  z-index: 50; /* Ensure it's above other elements */
+  // position: sticky;
+  position: fixed !important;
+
+  // top: 0; /* Stick it to the top of the viewport */
+  // left: 0; /* Stick it to the left of the viewport */
+  width: 100%; /* Make it full-width */
+  height: 7vh;
+  &.opened_sidebar {
+    @media (max-width: $regular_phone) {
+      background-color: $primary_background_light;
+      border-bottom: 1px solid $light_gray;
+    }
+  }
+
+  &__logo {
+    // order: 2; /* Make it the most left item */
+
+    font-style: italic;
+    font-weight: 700;
+    line-height: 14.488px; /* 96.59% */
+    letter-spacing: 1.208px;
+    align-self: center;
+    text-align: center;
+    @media (max-width: $regular_phone) {
+      position: absolute; /* Fix the logo's position */
+      left: 37vw; /* Adjust the left position as needed */
+    }
+  }
+  &__actions {
+    // order: 3; /* Make it the most left item */
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    &__search {
+      margin-right: 10px;
+    }
+    &__cart {
+      margin-inline-end: 16px;
+    }
+
+    &__closeButton {
+      cursor: pointer;
+      margin-inline-end: 10px;
+      transition: $transition;
+    }
+  }
+
+  @media (max-width: $regular_phone) {
+    height: 6vh;
+    background-color: $nav_bar_transparent_gray;
+  }
+}

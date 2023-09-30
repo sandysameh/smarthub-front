@@ -1,0 +1,213 @@
+@use "../../../../assets/styles/vars/colors" as *;
+@use "../../../../assets/styles/vars/common" as *;
+
+.carousel_container {
+  position: relative;
+  width: 100vw;
+  height: 70vh;
+  overflow: hidden;
+
+  .carousel_slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s;
+
+    &.active {
+      opacity: 1;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .image_text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-75%, -50%);
+      z-index: 2;
+      color: rgb(0 0 0 / 54%);
+      font-size: 30px;
+      font-style: italic;
+    }
+  }
+  .carousel_button {
+    position: absolute;
+    bottom: 16%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    border-radius: 30px;
+    padding: 8px 30px;
+    background-color: $nav_bar_transparent_gray;
+    color: $white_background;
+    letter-spacing: 1px;
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+    font-size: 14px;
+
+    outline: none !important;
+    cursor: pointer;
+
+    @media (max-width: $regular_phone) {
+      cursor: none;
+    }
+
+    &:active,
+    :hover,
+    :focus {
+      background-color: $white_background;
+      color: $nav_bar_transparent_gray;
+      box-shadow: 0 0 3px 3px $nav_bar_transparent_gray; /* Add a box shadow on focus */
+
+      /* Other hover styles if needed */
+    }
+  }
+
+  .carousel_indicators {
+    position: absolute;
+    bottom: 9%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1rem;
+
+    .indicator {
+      width: 10px;
+      height: 10px;
+      background-color: white;
+      // opacity: 0.2;
+      background-color: transparent; // Set background to transparent
+      border: 2px solid white; // Add a border
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+      cursor: pointer;
+
+      &.active {
+        opacity: 1;
+        background-color: $white_background;
+      }
+
+      .indicator_text {
+        margin-top: 5px;
+        font-size: 14px;
+        color: white;
+      }
+    }
+  }
+
+  .carousel_text {
+    position: absolute;
+    bottom: 4%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+    letter-spacing: 1px;
+    font-size: 12px;
+  }
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  // Add more navbar styles as needed
+}
+
+// .carousel_container {
+//   position: relative;
+//   width: 100vw;
+//   height: 70vh;
+//   overflow: hidden;
+
+//   .carousel_slide {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     opacity: 0;
+//     transition: opacity 0.5s;
+
+//     &.active {
+//       opacity: 1;
+//     }
+
+//     img {
+//       width: 100%;
+//       height: 100%;
+//       object-fit: cover;
+//     }
+
+//     .image_text {
+//       position: absolute;
+//       top: 50%;
+//       left: 50%;
+//       transform: translate(-50%, -50%);
+//       z-index: 2;
+//       color: white;
+//       font-size: 24px;
+//       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+//     }
+//   }
+
+//   .carousel_button {
+//     position: absolute;
+//     bottom: 20%;
+//     left: 50%;
+//     transform: translate(-50%, 50%);
+//   }
+
+//   .carousel_indicators {
+//     position: absolute;
+//     bottom: 10%;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     display: flex;
+//     gap: 1rem;
+
+//     .indicator_container {
+//       display: flex;
+//       flex-direction: column;
+//       align-items: center;
+
+//       .indicator {
+//         width: 15px;
+//         height: 15px;
+//         background-color: white;
+//         clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+//         cursor: pointer;
+
+//         &.active {
+//           background-color: $orange;
+//         }
+//       }
+
+//       .indicator_text {
+//         margin-top: 5px;
+//         font-size: 14px;
+//         color: white;
+//       }
+//     }
+//   }
+
+//   .carousel_text {
+//     position: absolute;
+//     bottom: 15%;
+//     left: 50%;
+//     transform: translateX(-50%);
+//   }
+// }
+
+// .navbar {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 60px;
+// }

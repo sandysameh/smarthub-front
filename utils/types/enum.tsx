@@ -1,0 +1,67 @@
+export enum PagesEnum {
+  Fashion = "fashion",
+  Beauty = "beauty",
+  Planning = "planning",
+  Jewelers = "jewelers",
+  Hotels = "hotels",
+  Furnishing = "furnishing",
+  Outings = "outings",
+  RealEstate = "realestate",
+  ChurchsAndMosques = "churchsandmosques",
+  //Beauty Pages
+  MakeUp = "makeup",
+  Hairdressers = "hairdressers",
+  SkinCare = "skincare",
+  LaserTreatment = "laser",
+  TeethWhitening = "teeth",
+  spa = "spa",
+  NailSalons = "nailsalons",
+  TattoMicroBlading = "tatto",
+  // Fashion Pages
+  FashionDesigners = "fashiondesigners",
+  WeddingDresses = "weddingdresses",
+  EveningDresses = "eveningdresses",
+  Suits = "suits",
+  HomeWear = "homewear",
+  Lingerie = "lingerie",
+  BrideMaidDresses = "bridemaiddresses",
+  FlowerGirl = "flowergirl",
+  // Planning & Entertainment
+  WeddingPlanners = "weddingplanners",
+  Djs = "djs",
+  Photographers = "photographers",
+  Caterer = "caterer",
+  Zaffa = "zaffa",
+  BellyDancer = "bellydancer",
+  BarTenders = "bartenders",
+  Fireworks = "fireworks",
+  Limousine = "limousine",
+  Photobooths = "photobooths",
+  Cakes = "cakes",
+  Videographers = "videographers",
+  Chocolates = "chocolates",
+  Invitations = "invitations",
+  // JWELLERY
+  WeddingRing = "weddingring",
+  ProposalRing = "proposalring",
+  BridalTiars = "bridaltiars",
+  Wigs = "wigs",
+  Shoes = "Shoes",
+  BachroleteDress = "bachroletedress",
+  Headpieces = "headpieces",
+  Bouquet = "bouquet",
+  //Ballrooms &Venus:
+  Resorts = "Resorts",
+  Villas = "Villas",
+  //Proposal Outing – Dating:
+  Restaurant = "restaurant",
+  Bars = "bars",
+  // Real Estate
+  BrokerageCompanies = "brokeragecompanies",
+  Developers = "developers",
+}
+
+export enum COLLECTIONS {
+  COLLECTION = "COLLECTION",
+  WEDDING_DETAILS = "WEDDING DETAILS",
+}

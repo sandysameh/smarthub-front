@@ -1,0 +1,30 @@
+@use "colors" as *;
+
+$box_shadow: 0 2px 4px 0 $box_shadow_color;
+$border_radius: 26px;
+$transition: all 225ms cubic-bezier(0.4, 0, 0.6, 1) 0ms;
+$navbar_height: 75px;
+
+$main_font: "Tenor Sans";
+$adv_font: "Bodoni Moda 28pt";
+$logo_font: "Bodoni Moda 28pt";
+
+$small_phone_size: 375px;
+$regular_phone: 575.98px;
+$large_phone: 767px;
+
+$min_tab_device: 768px;
+$max_tab_device: 991px;
+
+$xs_gutters: 2.5rem;
+$lg_gutters: 3rem;
+
+// TO BE USED IN ENHANCEMENTS
+$medium_device: "(min-width: 992px) and (max-width: 1200px)";
+$large_mobile: "(min-width: 576px) and (max-width: 767px)";
+$tab: "(max-width: 991px)";
+$small_mobile: "(max-width: 576px)";
+$xs_mobile: "(max-width: 420px)";
+$sm_mobile: "(min-width: 421px) and (max-width: 575px)";
+$big_screen: "(min-width: 1200px) and (max-width: 1440px)";
+$extra_big_screen: "(min-width: 1200px) and (max-width: 3640px)";
