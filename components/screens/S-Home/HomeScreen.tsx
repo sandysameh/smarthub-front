@@ -5,16 +5,10 @@ import styles from "./HomeScreen.module.scss";
 import Image from "next/image";
 import Carousel from "./Carousel/Carousel";
 
-const HomeScreen = () => {
+const HomeScreen = (props: { images: string[] }) => {
   return (
     <div className={styles.container}>
-      <Carousel
-        images={[
-          "https://smarthub-imgs.s3.me-south-1.amazonaws.com/wedding.jpeg",
-          "  https://smarthub-imgs.s3.me-south-1.amazonaws.com/wedding2.jpeg",
-          "https://smarthub-imgs.s3.me-south-1.amazonaws.com/wedding3.jpeg",
-        ]}
-      />
+      <Carousel images={props.images} />
     </div>
   );
 };
