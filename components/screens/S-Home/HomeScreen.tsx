@@ -4,20 +4,16 @@ import styles from "./HomeScreen.module.scss";
 
 import Image from "next/image";
 import Carousel from "./Carousel/Carousel";
+import Slider from "./Slider/Slider";
+import { Tab } from "@/utils/types/dataTypes";
 
-const HomeScreen = (props: { images: string[] }) => {
+const HomeScreen = (props: { images: string[]; tabs: Tab[] }) => {
   return (
     <div className={styles.container}>
       <Carousel images={props.images} />
+      <Slider tabs={props.tabs} />
     </div>
   );
 };
 
 export default HomeScreen;
-// {/* <Image
-//     src="https://smarthub-imgs.s3.me-south-1.amazonaws.com/wedding.jpeg"
-//     alt="SmartHub"
-//     width={400}
-//     height={300}
-//     loading="lazy"
-//   /> */}

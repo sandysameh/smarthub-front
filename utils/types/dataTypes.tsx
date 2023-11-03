@@ -8,3 +8,9 @@ export type subCategory = {
   title: string;
   path: string;
 };
+
+export type Tab = {
+  title: string;
+  backgroundColor: string;
+  imgUrl: string;
+};

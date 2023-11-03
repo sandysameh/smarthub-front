@@ -1,4 +1,15 @@
 import { COLLECTIONS, PagesEnum } from "../../../utils/types/enum";
+const colors = {
+  pastel_pink: "#fbb9c5",
+  pastel_orange: " #fdd0b1",
+  pastel_yellow: "#f9efc7",
+  pastel_green: "#c3edbf",
+  pastel_blue: "#b8dfe6",
+  pastel_purple: "#c5bbde",
+  pastel_lavender: "#E3D7FC",
+  pastel_peach: "#D8704D",
+  pastel_brown: "#cfac88",
+};
 
 export const MenuItems = [
   {
@@ -43,6 +54,7 @@ export const MenuItems = [
           },
         ],
         imgUrl: "https://smarthub-imgs.s3.me-south-1.amazonaws.com/beauty.jpeg",
+        backgroundColor: colors.pastel_pink,
       },
       {
         title: "Fashion",
@@ -84,6 +96,7 @@ export const MenuItems = [
         ],
         imgUrl:
           "https://smarthub-imgs.s3.me-south-1.amazonaws.com/fashion.jpeg",
+        backgroundColor: colors.pastel_purple,
       },
 
       {
@@ -149,6 +162,7 @@ export const MenuItems = [
         ],
         imgUrl:
           "https://smarthub-imgs.s3.me-south-1.amazonaws.com/planning.jpeg",
+        backgroundColor: colors.pastel_blue,
       },
       {
         title: "Jewelers & Wearable Accessories",
@@ -189,6 +203,7 @@ export const MenuItems = [
         ],
         imgUrl:
           "https://smarthub-imgs.s3.me-south-1.amazonaws.com/jewelers.jpeg",
+        backgroundColor: colors.pastel_yellow,
       },
       {
         title: "Hotels - Resorts",
@@ -209,6 +224,7 @@ export const MenuItems = [
         ],
         imgUrl:
           "https://smarthub-imgs.s3.me-south-1.amazonaws.com/honeymoonnn.jpeg",
+        backgroundColor: colors.pastel_brown,
       },
       {
         title: "Furnishing – Interior Designers",
@@ -216,6 +232,7 @@ export const MenuItems = [
         subCategory: [],
         imgUrl:
           "https://smarthub-imgs.s3.me-south-1.amazonaws.com/furnishing.jpeg",
+        backgroundColor: colors.pastel_orange,
       },
       {
         title: "Proposal Outing - Dating",
@@ -232,6 +249,7 @@ export const MenuItems = [
         ],
         imgUrl:
           "https://smarthub-imgs.s3.me-south-1.amazonaws.com/outings.jpeg",
+        backgroundColor: colors.pastel_yellow,
       },
       {
         title: "Real-Estate",
@@ -248,11 +266,15 @@ export const MenuItems = [
         ],
         imgUrl:
           "https://smarthub-imgs.s3.me-south-1.amazonaws.com/real+estate.jpeg",
+        backgroundColor: colors.pastel_blue,
       },
       {
         title: "Churches and  Mosques",
         path: `/${PagesEnum.ChurchsAndMosques}`,
         subCategory: [],
+        imgUrl:
+          "https://smarthub-imgs.s3.me-south-1.amazonaws.com/church-and-mosque.jpeg",
+        backgroundColor: colors.pastel_peach,
       },
     ],
   },
