@@ -15,11 +15,11 @@
       content: "";
       position: absolute;
       bottom: 0;
-      left: 50%;
+      left: 49%;
       transform: translateX(-50%);
       height: 1px;
-      width: 50%;
-      background-color: black;
+      width: 32%;
+      background-color: $text_light_gary;
     }
   }
 
@@ -63,7 +63,7 @@
       width: 100%;
       max-width: 500px;
       margin: 20px 0px;
-      padding: 20px; // Adjust padding as needed.
+      padding: 40px; // Adjust padding as needed.
       background-color: var(--tab-color);
       border-radius: 30px;
 
@@ -74,7 +74,7 @@
         display: block; // Removes any default vertical space.
         opacity: 0; // Set to 0 to make the image initially invisible.
         transition: opacity 0.3s ease; // Set a transition on the opacity property.
-        border-radius: 30px;
+        // border-radius: 30px;
 
         &.visible {
           opacity: 1; // When the "visible" class is added to the image, it will fade in.
