@@ -6,11 +6,29 @@
   display: flex;
   flex-direction: column;
 
+  // .title {
+  //   position: relative;
+  //   padding-bottom: 10px;
+  //   font-size: 18px;
+  //   letter-spacing: 4px;
+  //   &::after {
+  //     content: "";
+  //     position: absolute;
+  //     bottom: 0;
+  //     left: 49%;
+  //     transform: translateX(-50%);
+  //     height: 1px;
+  //     width: 32%;
+  //     background-color: $text_light_gary;
+  //   }
+  // }
   .title {
     position: relative;
-    padding-bottom: 10px;
+    padding-bottom: 20px; /* Adjusted to give space for the diamond */
     font-size: 18px;
     letter-spacing: 4px;
+    text-align: center; /* Center the text */
+
     &::after {
       content: "";
       position: absolute;
@@ -18,11 +36,23 @@
       left: 49%;
       transform: translateX(-50%);
       height: 1px;
-      width: 32%;
+      width: 29%;
       background-color: $text_light_gary;
     }
-  }
 
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -3px; /* Half of the diamond's height to position it centered on the line */
+      left: 49%; /* Center horizontally */
+      transform: translateX(-50%) rotate(45deg);
+      width: 6px; /* Diamond width, can be adjusted */
+      height: 6px; /* Diamond height, should be the same as the width for a square */
+      background-color:white ; // Set background to transparent
+      border: 0.2px solid $text_light_gary; // Add a border
+      z-index: 1; /* Ensure the diamond appears above the line */
+    }
+  }
   .tabs {
     display: flex;
     scroll-behavior: smooth;

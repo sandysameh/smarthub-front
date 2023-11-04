@@ -1,19 +1,17 @@
 @use "../../../assets/styles/vars/colors" as *;
 @use "../../../assets/styles/vars/common" as *;
 .sidebar {
-  min-height: 100vh; /* Minimum height to occupy the full viewport height */
-  overflow: auto; /* Add scrollbars when content overflows */
-  position: relative; /* Set position to relative */
-  margin-bottom: -100vh; /* Negative margin to prevent content below from appearing */
-  padding-top: 7vh;
-
-  left: 0;
-  overflow-x: hidden;
+  position: fixed; /* Keep sidebar fixed during scroll */
+  top: 0; /* Start from the top of the viewport */
+  bottom: 0; /* Stretch to the bottom of the viewport */
+  left: 0; /* Align to the left of the viewport */
+  width: 0; /* Default to no width */
+  overflow-y: auto; /* Scroll content vertically if necessary */
+  overflow-x: hidden; /* No horizontal scroll */
   background-color: $primary_background_light;
-  z-index: 20;
-  transition: $transition;
-  opacity: 0;
-  transform: translateX(-100%);
+  z-index: 30; /* High z-index to ensure it's above other content */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for opening and closing */
+  transform: translateX(-100%); /* Hide by default */
 
   &__nav_bar {
     padding: 40px 0px 0px;

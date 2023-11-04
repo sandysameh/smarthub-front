@@ -77,14 +77,12 @@
     gap: 1rem;
 
     .indicator {
-      width: 10px;
-      height: 10px;
-      background-color: white;
-      // opacity: 0.2;
       background-color: transparent; // Set background to transparent
-      border: 2px solid white; // Add a border
-      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+      border: 0.2px solid white; // Add a border
       cursor: pointer;
+      transform: translateX(-50%) rotate(45deg);
+      width: 6px; /* Diamond width, can be adjusted */
+      height: 6px; /* Diamond height, should be the same as the width for a square */
 
       &.active {
         opacity: 1;
